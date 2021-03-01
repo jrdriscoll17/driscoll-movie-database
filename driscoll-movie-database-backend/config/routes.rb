@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :movies, except: %i[update, edit]
+  namespace :api do
+    resources :users
+    resources :movies, except: %i[update, edit]
+  end
 end
