@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NavBar from './components/NavBar';
 import './App.css';
 
+//Components
+import NavBar from './components/NavBar';
+
+//Pages
 import home from './pages/home';
 import login from './pages/login';
 import signup from './pages/signup';
