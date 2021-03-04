@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import theaterBackground from '../images/theater-background.jpg';
 
 export class home extends Component {
   render() {
-    return (
-      <h1>Home</h1>
-    )
+    return <div style={{ backgroundImage: `url(${theaterBackground})` }}></div>;
   }
 }
 
-export default home
+export default home;
