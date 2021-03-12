@@ -1,12 +1,10 @@
-const initialState = null;
-
-const reducer = (state = initialState, action) => {
+const movieReducer = (state = { movies: {} }, action) => {
   switch (action.type) {
     case 'FETCH_MOVIES':
-      return state;
+      return { movies: action.payload };
     default:
-      return null;
+      return state;
   }
 };
 
-export default reducer;
+export default movieReducer;

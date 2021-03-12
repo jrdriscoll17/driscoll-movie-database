@@ -4,7 +4,7 @@ import React from 'react';
 export default function NavBar() {
   return (
     <div className='nav-container'>
-      <Link to='/' classname='nav-link'>
+      <Link to='/' className='nav-link'>
         DMDB
       </Link>
     </div>
