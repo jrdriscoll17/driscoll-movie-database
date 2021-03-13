@@ -1,30 +1,28 @@
-// import React, { PureComponent } from 'react';
-// // import Movie from './Movie';
-// import Movies from './Movies';
-// import { Route, Switch } from 'react-router-dom';
-// import { connect } from 'react-redux';
-// import { fetchMovies } from '../../actions/movieActions';
+import React, { PureComponent } from 'react';
+// import Movie from './Movie';
+import Movies from './Movies';
+import { Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-// class MovieContainer extends PureComponent {
-//   componentDidMount() {
-//     this.props.fetchMovies();
-//   }
+class MovieContainer extends PureComponent {
+  render() {
+    return (
+      <Switch>
+        <Route path='/movies'>
+          <Movies movies={this.props.movies} />
+        </Route>
+        {/* <Route path='/movie'>
+          <Movie movie={this.props.movie} />
+        </Route> */}
+      </Switch>
+    );
+  }
+}
 
-//   render() {
-//     return (
-//       <Switch>
-//         <Route exact path='/movies'>
-//           <Movies movies={this.props.movies} />
-//         </Route>
-//       </Switch>
-//     );
-//   }
-// }
+const mapStateToProps = ({ movies }) => {
+  return {
+    movies,
+  };
+};
 
-// const mapStateToProps = ({ movies }) => {
-//   return {
-//     movies,
-//   };
-// };
-
-// export default connect(mapStateToProps, { fetchMovies })(MovieContainer);
+export default connect(mapStateToProps)(MovieContainer);

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
+import MovieConatiner from './components/movies/MovieConatiner';
 import NavBar from './components/NavBar';
 
 function App() {
@@ -10,8 +11,8 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/movies' />
       </Switch>
+      <MovieConatiner />
     </Router>
   );
 }
