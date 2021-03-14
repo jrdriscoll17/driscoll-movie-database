@@ -14,11 +14,15 @@ class SearchForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+
     this.props.fetchMovies(this.state.search);
     this.props.history.push(`/movies/${this.state.search}`);
   };
 
   render() {
+    // if (this.props.redirectTo) {
+    //   this.props.history.push(`/movies/${this.state.search}`);
+    // }
     return (
       <div className='form-container'>
         <form onSubmit={this.handleSubmit}>
@@ -38,4 +42,17 @@ class SearchForm extends Component {
   }
 }
 
-export default withRouter(connect(null, { fetchMovies })(SearchForm));
+const mapStateToProps = ({
+  movieReducer: { loading, movies, errors, redirectTo },
+}) => {
+  return {
+    loading,
+    movies,
+    errors,
+    redirectTo,
+  };
+};
+
+export default withRouter(
+  connect(mapStateToProps, { fetchMovies })(SearchForm)
+);

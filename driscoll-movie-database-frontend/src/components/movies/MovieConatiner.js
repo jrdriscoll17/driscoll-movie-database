@@ -1,25 +1,16 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 // import Movie from './Movie';
 import Movies from './Movies';
-import { Route, Switch } from 'react-router-dom';
+// import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-class MovieContainer extends PureComponent {
+class MovieContainer extends Component {
   render() {
-    return (
-      <Switch>
-        <Route path='/movies'>
-          <Movies movies={this.props.movies} />
-        </Route>
-        {/* <Route path='/movie'>
-          <Movie movie={this.props.movie} />
-        </Route> */}
-      </Switch>
-    );
+    return <Movies movies={this.props.movies} />;
   }
 }
 
-const mapStateToProps = ({ movies }) => {
+const mapStateToProps = ({ movieReducer: { movies } }) => {
   return {
     movies,
   };

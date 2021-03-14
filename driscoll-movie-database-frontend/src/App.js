@@ -11,8 +11,8 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path='/' component={Home} />
+        <Route path='/movies' component={MovieConatiner} />
       </Switch>
-      <MovieConatiner />
     </Router>
   );
 }
