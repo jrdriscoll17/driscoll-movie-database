@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchMovies } from '../actions/movies/movieActions';
+import { fetchMovies } from '../../actions/movies/movieActions';
 import { withRouter } from 'react-router';
+import './Search.css';
 
 class SearchForm extends Component {
   state = {
@@ -20,22 +21,20 @@ class SearchForm extends Component {
   };
 
   render() {
-    // if (this.props.redirectTo) {
-    //   this.props.history.push(`/movies/${this.state.search}`);
-    // }
     return (
       <div className='form-container'>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className='form'>
+          <p className='input-container'>
           <input
             type='text'
-            name='movie-search'
-            id='movie-search'
+            className='movie-search'
             placeholder='e.g. Batman'
             onChange={this.handleChange}
           />
-          <button type='submit' name='search'>
+          <button type='submit' className='search-button'>
             Search
           </button>
+          </p>
         </form>
       </div>
     );

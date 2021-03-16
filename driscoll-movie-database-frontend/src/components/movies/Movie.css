@@ -1,0 +1,28 @@
+ul {
+  list-style: none;
+}
+
+.movie-list-container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.movie-list {
+  display: flex;
+  max-width: 70vw;
+  flex-wrap: wrap;
+}
+
+.movie-list-item {
+  margin: 10px;
+  max-width: min-content;
+}
+
+.movie-list-item img {
+  max-height: 300px;
+}
+
+.movie-list-item .label {
+  word-wrap: normal;
+  color: white;
+}
