@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import './Nav.css';
 
-export default function NavBar() {
+const NavBar = () => {
   return (
     <div className='nav-container'>
       <Link to='/' className='nav-link'>
@@ -10,4 +10,6 @@ export default function NavBar() {
       </Link>
     </div>
   );
-}
+};
+
+export default NavBar;

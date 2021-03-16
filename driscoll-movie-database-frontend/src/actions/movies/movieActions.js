@@ -8,9 +8,6 @@ export const fetchMovies = search => dispatch => {
     .then(response => {
       dispatch({ type: 'FETCH_MOVIES_SUCCESS', payload: response.data.Search });
     })
-    .then(() => {
-      dispatch({ type: 'REDIRECT', payload: `/movies/${search}` });
-    })
     .catch(errors => {
       dispatch({ type: 'FETCH_MOVIES_FAILURE', payload: errors });
     });
