@@ -1,0 +1,115 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 62px);
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.form {
+  display: flex;
+  width: 100%;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-search {
+  flex-grow: 1;
+  max-width: 40vw;
+  height: 5vh;
+  font-size: 2rem;
+  border-radius: 40px;
+  margin: 10px;
+  border: none;
+  padding: 10px;
+}
+
+.search-button {
+  height: 7vh;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 45px;
+}
+
+.search-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.input-container {
+  padding: 10px;
+  display: flex;
+  background-color: rgb(54, 54, 54);
+  height: max-content;
+  width: 47vw;
+  border-radius: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.movie-list-container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.movie-list {
+  display: flex;
+  max-width: 70vw;
+  flex-wrap: wrap;
+}
+
+.movie-list-item {
+  margin: 10px;
+  max-width: min-content;
+}
+
+.movie-list-item img {
+  max-height: 300px;
+}
+
+.movie-list-item .label {
+  word-wrap: normal;
+  color: white;
+}
+
+.nav-container {
+  background-color: rgb(54, 54, 54);
+  display: flex;
+  max-height: min-content;
+}
+
+.nav-link {
+  margin-left: 10px;
+
+  font-size: 2rem;
+  align-self: center;
+}
+
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  color: white;
+  text-decoration: none;
+  outline: none;
+}
+
+
+/*# sourceMappingURL=/src.7ed060e2.css.map */
