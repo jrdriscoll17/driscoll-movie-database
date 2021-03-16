@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Movie extends Component {
-  render() {
-    return <div></div>;
-  }
-}
+const Movie = props => {
+  return (
+    <>
+      <img src={props.movie.Poster} alt='movie poster' />
+      <p className='label'>
+        {props.movie.Title} ({props.movie.Year})
+      </p>
+    </>
+  );
+};
 
 export default Movie;
