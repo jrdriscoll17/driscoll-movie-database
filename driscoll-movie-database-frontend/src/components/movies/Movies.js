@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './Movie.css';
+// import './Movie.css';
 import Movie from './Movie';
 
 const Movies = props => {
